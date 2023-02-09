@@ -16,7 +16,7 @@ https://stackoverflow.com/questions/75340790/how-to-access-a-pivot-table-from-a-
 - The user needs to load information from a Belongs To Many relation table in the `Laravel way 🙂`.
 
 ## The Answer
-- Check the [README.md](#) file on the `Models` folder.
+- Check the [README.md](https://github.com/ricardov03/btm-pivot-relations/tree/main/app/Models) file on the `Models` folder.
 
 ### How to use this Repository
 - [ ] Clone the project.
