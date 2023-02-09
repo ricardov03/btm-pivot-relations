@@ -35,8 +35,13 @@ class Product extends Model
         'id' => 'integer',
     ];
 
-    public function properties(): HasMany
+    protected $with = ['properties'];
+
+    public function properties(): BelongsToMany
     {
-        return $this->hasMany(Property::class);
+        return $this->belongsToMany(Property::class)
+            ->as('attributes')
+            ->using(ProductProperty::class)
+            ->withPivot('position');
     }
 }
