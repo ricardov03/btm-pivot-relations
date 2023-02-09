@@ -20,7 +20,7 @@ class ProductSeeder extends Seeder
             ->hasAttached(
                 Property::factory()->count(3),
                 [
-                    'position' => fake()->unique()->randomNumber(1)
+                    'position' => fake()->unique()->randomNumber(1),
                 ]
             )
             ->create();

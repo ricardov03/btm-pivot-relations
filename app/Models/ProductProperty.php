@@ -7,10 +7,11 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 class ProductProperty extends Pivot
 {
     protected $casts = [
-        'position' => 'integer'
+        'position' => 'integer',
     ];
+
     protected $hidden = [
         'product_id',
-        'property_id'
+        'property_id',
     ];
 }

@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class PropertyController extends Controller
 {
     /**
-     * @param \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \App\Http\Resources\PropertyCollection
      */
     public function index(Request $request)
