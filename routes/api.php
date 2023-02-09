@@ -18,7 +18,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
 Route::apiResource('product', App\Http\Controllers\ProductController::class)->only('index');
-
 Route::apiResource('property', App\Http\Controllers\PropertyController::class)->only('index');
