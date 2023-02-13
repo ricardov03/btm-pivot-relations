@@ -16,6 +16,7 @@ class CreatePropertiesTable extends Migration
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
             $table->string('name', 100);
+            $table->foreignId('parent')->nullable();
         });
     }
 
