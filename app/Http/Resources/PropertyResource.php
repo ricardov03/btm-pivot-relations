@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Models\ProductProperty;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class PropertyResource extends JsonResource
@@ -14,10 +15,17 @@ class PropertyResource extends JsonResource
      */
     public function toArray($request)
     {
+        if(is_null($this->parent)) {
+            return [
+                'property_id' => $this->id,
+                'property_name' => $this->name,
+                'sub_properties' => new PropertyCollection($this->properties),
+            ];
+        }
+
         return [
             'property_id' => $this->id,
             'property_name' => $this->name,
-            'property_position' => $this->attributes->position,
         ];
     }
 }

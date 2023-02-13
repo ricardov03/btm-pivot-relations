@@ -34,8 +34,15 @@ class Property extends Model
         'id' => 'integer',
     ];
 
-    public function products()
+    protected $with = ['properties'];
+
+    public function product()
     {
         return $this->belongsToMany(Product::class);
+    }
+
+    public function properties()
+    {
+        return $this->hasMany(Property::class, 'parent', 'id');
     }
 }
